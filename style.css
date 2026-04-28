@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* DJ neon animated background */
+    background: linear-gradient(135deg, #b378a8, #6e6ea5, #89e7d4);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+}
+
+/* background animation */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* profile card */
+.card {
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+
+    color: white;
+}
+
+/* profile image */
+.profile {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid white;
+    box-shadow: 0 0 20px #00ffcc;
+
+    margin-bottom: 15px;
+}
+
+/* text */
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* social icons container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 18px;
+}
+
+/* common icon style */
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* LinkedIn */
+.social-links a:nth-child(1) {
+    background: #0077b5;
+}
+
+/* Instagram */
+.social-links a:nth-child(2) {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* Snapchat */
+.social-links a:nth-child(3) {
+    background: #fffc00;
+    color: rgb(13, 11, 11);
+}
+.skill-box {
+    display: inline-block;
+    margin: 6px 5px;
+    padding: 6px 12px;
+
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    /* START STATE (hidden below) */
+    opacity: 0;
+    transform: translateY(30px);
+
+    /* animation */
+    animation: riseUp 0.6s ease forwards;
+}
+
+/* smooth upward motion */
+@keyframes riseUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skill-box:nth-child(1) { animation-delay: 0.2s; }
+.skill-box:nth-child(2) { animation-delay: 0.4s; }
+.skill-box:nth-child(3) { animation-delay: 0.6s; }
+.skill-box:nth-child(4) { animation-delay: 0.8s; }
+.skill-box:nth-child(5) { animation-delay: 1.0s; }
+.skill-box:nth-child(6) { animation-delay: 1.2s; }
